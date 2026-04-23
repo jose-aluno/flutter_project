@@ -20,6 +20,11 @@ class _Aula09State extends State<Aula09> {
   Widget build(BuildContext context) {
     return PopScope(
       canPop: false,
+      onPopInvokedWithResult: (didPop, result) {
+        if (didPop) {
+          debugPrint("eaaaaaaaaaaaaaaaa");
+        }
+      },
       child: Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,

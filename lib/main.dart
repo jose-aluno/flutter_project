@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_project/aula08/aula08.dart';
 import 'package:flutter_project/aula08/classes/login_details.dart';
 import 'package:flutter_project/aula08/widgets/login_text_field.dart';
+import 'package:flutter_project/aula09/aula09.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: const Aula08(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Aula08(),
+        '/aula09': (context) => Aula09()
+      },
     );
   }
 }

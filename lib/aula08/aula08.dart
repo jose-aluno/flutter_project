@@ -118,10 +118,7 @@ class _Aula08State extends State<Aula08> {
                   minimumSize: Size(larguraTela * 0.75, 45),
                 ),
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Aula09()),
-                  );
+                  Navigator.pushNamed(context, '/aula09');
                 },
                 child: Text("Login"),
               ),
