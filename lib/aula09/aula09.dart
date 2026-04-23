@@ -27,7 +27,12 @@ class _Aula09State extends State<Aula09> {
         backgroundColor: Colors.green,
         selectedItemColor: Colors.white,
         currentIndex: _itemSelecionado,
-        onTap: _atualizarBottomNav,
+        onTap: (idx) {
+          if (idx == 2) {
+            Navigator.pop(context);
+          }
+          _atualizarBottomNav(idx);
+        },
         items: [
           BottomNavigationBarItem(
             label: 'Dashboard',
