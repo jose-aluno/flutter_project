@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project/aula08/classes/login_details.dart';
 import 'package:flutter_project/aula08/widgets/login_text_field.dart';
+import 'package:flutter_project/aula09/aula09.dart';
 
 class Aula08 extends StatefulWidget {
   const Aula08({super.key});
@@ -116,7 +117,12 @@ class _Aula08State extends State<Aula08> {
                 style: ElevatedButton.styleFrom(
                   minimumSize: Size(larguraTela * 0.75, 45),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Aula09(usuario: _loginController.text)),
+                  );
+                },
                 child: Text("Login"),
               ),
             ],
