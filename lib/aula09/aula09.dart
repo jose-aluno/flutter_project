@@ -18,6 +18,9 @@ class _Aula09State extends State<Aula09> {
 
   @override
   Widget build(BuildContext context) {
+    var args =
+        ModalRoute.of(context)!.settings.arguments as Map<String, String>;
+
     return PopScope(
       canPop: false,
       onPopInvokedWithResult: (didPop, result) {
@@ -30,7 +33,7 @@ class _Aula09State extends State<Aula09> {
           automaticallyImplyLeading: false,
         ),
         body: Center(
-          child: Text("Tela Aula 09"),
+          child: Text("Bem vindo ${args['usuario']}"),
         ),
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Colors.green,
