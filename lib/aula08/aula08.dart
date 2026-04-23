@@ -120,7 +120,7 @@ class _Aula08State extends State<Aula08> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Aula09(usuario: _loginController.text)),
+                    MaterialPageRoute(builder: (context) => Aula09()),
                   );
                 },
                 child: Text("Login"),
