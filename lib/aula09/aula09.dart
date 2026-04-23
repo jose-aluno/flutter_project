@@ -18,35 +18,40 @@ class _Aula09State extends State<Aula09> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: Center(
-        child: Text("Tela Aula 09"),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.green,
-        selectedItemColor: Colors.white,
-        currentIndex: _itemSelecionado,
-        onTap: (idx) {
-          if (idx == 2) {
-            Navigator.pop(context);
-          }
-          _atualizarBottomNav(idx);
-        },
-        items: [
-          BottomNavigationBarItem(
-            label: 'Dashboard',
-            icon: Icon(Icons.home),
-          ),
-          BottomNavigationBarItem(
-            label: 'Disciplinas',
-            icon: Icon(Icons.menu_book),
-          ),
-          BottomNavigationBarItem(
-            label: 'Sair',
-            icon: Icon(Icons.logout),
-          ),
-        ],
+    return PopScope(
+      canPop: false,
+      child: Scaffold(
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+        ),
+        body: Center(
+          child: Text("Tela Aula 09"),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.green,
+          selectedItemColor: Colors.white,
+          currentIndex: _itemSelecionado,
+          onTap: (idx) {
+            if (idx == 2) {
+              Navigator.pop(context);
+            }
+            _atualizarBottomNav(idx);
+          },
+          items: [
+            BottomNavigationBarItem(
+              label: 'Dashboard',
+              icon: Icon(Icons.home),
+            ),
+            BottomNavigationBarItem(
+              label: 'Disciplinas',
+              icon: Icon(Icons.menu_book),
+            ),
+            BottomNavigationBarItem(
+              label: 'Sair',
+              icon: Icon(Icons.logout),
+            ),
+          ],
+        ),
       ),
     );
   }
