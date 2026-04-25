@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project/aula09/classes/disciplina.dart';
+import 'package:flutter_project/aula09/view/aula09_dashboard.dart';
+import 'package:flutter_project/aula09/view/aula09_disciplinas.dart';
 import 'package:flutter_project/aula09/widgets/disciplina_card.dart';
 
 class Aula09 extends StatefulWidget {
@@ -11,6 +13,7 @@ class Aula09 extends StatefulWidget {
 
 class _Aula09State extends State<Aula09> {
   var _itemSelecionado = 0;
+  final _telas = [Aula09Dashboard(), Aula09Disciplinas()];
 
   void _atualizarBottomNav(int idx) {
     setState(() {
@@ -34,11 +37,7 @@ class _Aula09State extends State<Aula09> {
         appBar: AppBar(
           automaticallyImplyLeading: false,
         ),
-        body: Center(
-          child: DisciplinaCard(
-            disciplina: Disciplina.gerarDisciplinas().first,
-          ),
-        ),
+        body: _telas[_itemSelecionado],
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Colors.green,
           selectedItemColor: Colors.white,
@@ -46,6 +45,7 @@ class _Aula09State extends State<Aula09> {
           onTap: (idx) {
             if (idx == 2) {
               Navigator.pop(context);
+              return;
             }
             _atualizarBottomNav(idx);
           },

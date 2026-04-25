@@ -16,7 +16,7 @@ class DisciplinaCard extends StatelessWidget {
     return Card(
       margin: EdgeInsets.all(16),
       child: SizedBox(
-        height: 10,
+        height: 100,
         child: Row(
           children: [
             SizedBox(
