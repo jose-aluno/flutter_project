@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project/aula09/classes/disciplina.dart';
+import 'package:flutter_project/aula09/widgets/disciplina_card.dart';
 
 class Aula09 extends StatefulWidget {
   const Aula09({super.key});
@@ -33,7 +35,9 @@ class _Aula09State extends State<Aula09> {
           automaticallyImplyLeading: false,
         ),
         body: Center(
-          child: Text("Bem vindo ${args['usuario']}"),
+          child: DisciplinaCard(
+            disciplina: Disciplina.gerarDisciplinas().first,
+          ),
         ),
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Colors.green,
