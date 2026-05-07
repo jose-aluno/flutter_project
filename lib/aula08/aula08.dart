@@ -117,7 +117,11 @@ class _Aula08State extends State<Aula08> {
                   minimumSize: Size(larguraTela * 0.75, 45),
                 ),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/aula10', arguments: {'usuario': _loginController.text});
+                  Navigator.pushNamed(
+                    context,
+                    '/aula10',
+                    arguments: {'usuario': _loginController.text},
+                  );
                 },
                 child: Text("Login"),
               ),
