@@ -29,6 +29,14 @@ class PedidoView extends StatelessWidget {
               );
             },
           ),
+          Divider(),
+          Container(
+            alignment: .bottomEnd,
+            padding: EdgeInsets.all(8),
+            child: Text(
+              'Valor total: R\$${carrinho.valorTotal.toStringAsFixed(2)}',
+            ),
+          ),
         ],
       ),
     );
