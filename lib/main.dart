@@ -4,9 +4,16 @@ import 'package:flutter_project/aula08/classes/login_details.dart';
 import 'package:flutter_project/aula08/widgets/login_text_field.dart';
 import 'package:flutter_project/aula09/aula09.dart';
 import 'package:flutter_project/aula10/aula10.dart';
+import 'package:flutter_project/aula12/model/carrinho_model.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => CarrinhoModel(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
