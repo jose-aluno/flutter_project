@@ -5,6 +5,7 @@ import 'package:flutter_project/aula08/widgets/login_text_field.dart';
 import 'package:flutter_project/aula09/aula09.dart';
 import 'package:flutter_project/aula10/aula10.dart';
 import 'package:flutter_project/aula12/model/carrinho_model.dart';
+import 'package:flutter_project/aula12/view/cardapio_view.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -24,11 +25,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      initialRoute: '/',
+      initialRoute: '/aula12',
       routes: {
         '/': (context) => Aula08(),
         '/aula09': (context) => Aula09(),
         '/aula10': (context) => Aula10(),
+        '/aula12': (context) => CardapioView()
       },
     );
   }

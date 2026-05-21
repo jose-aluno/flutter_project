@@ -16,6 +16,8 @@ class CarrinhoModel extends ChangeNotifier {
     return vltotal;
   }
 
+  int get numProdutos => _lista.length;
+
   void adicionar(Produto p) {
     _lista.add(p);
     notifyListeners();
