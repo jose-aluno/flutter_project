@@ -13,6 +13,7 @@ class PedidoView extends StatelessWidget {
       body: Column(
         children: [
           ListView.builder(
+            shrinkWrap: true,
             itemCount: carrinho.numProdutos,
             itemBuilder: (context, index) {
               var produto = carrinho.produtos[index];
