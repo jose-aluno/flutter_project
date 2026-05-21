@@ -24,7 +24,7 @@ class CarrinhoModel extends ChangeNotifier {
   }
 
   void remover(Produto p) {
-    _lista.remove(p);
+    _lista.removeWhere((prod) => prod.id == p.id);
     notifyListeners();
   }
 
